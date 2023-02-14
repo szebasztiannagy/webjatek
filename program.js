@@ -15,11 +15,6 @@ function jatekterbetoltes(){
     jatekter.appendChild(leftbox);
     jatekter.appendChild(tabla);
     jatekter.appendChild(korokbox);
-
-    kartyabox.innerHTML = "kartyabox";
-    pontokbox.innerHTML = "pontok";
-    tabla.innerHTML = "tabla";
-    korokbox.innerHTML = "korok";
 }
 
 function jatekterelrendezes(){
@@ -32,11 +27,13 @@ function jatekterelrendezes(){
 
 function tablageneralas(){
     var k = 1;
+
     for (let index = 0; index < 5; index++) {
         var sorDiv = document.createElement("div");
         for (let index2 = 0; index2 < 6; index2++) {
             var oszlopDiv = document.createElement("div");
-            oszlopDiv.classList += " oszlopdiv"
+            oszlopDiv.classList += " oszlopdiv";
+            oszlopDiv.id = k    ;
             sorDiv.appendChild(oszlopDiv);
             k++;
         }
@@ -46,6 +43,51 @@ function tablageneralas(){
 }
 
 function tablafeltoltes(){
+    const kepek = [];
+    const box = [];
+    const kepek2 = [];
+    for (let index = 0; index < 23; index++) {
+        var random1 = Math.floor(Math.random()*23+1);
+        var random2 = Math.floor(Math.random()*30+1);
+        var kep = document.createElement("img");
+
+        while(kepek.includes(random1) == true){
+            random1 = Math.floor(Math.random()*23+1);
+        }
+        kep.src = "kartyak/"+random1+".png";
+        kepek.push(random1);
+
+        while(box.includes(random2) == true){
+            random2 = Math.floor(Math.random()*30+1);
+        }
+        var cella = document.getElementById(random2);
+        box.push(random2);
+
+
+        cella.appendChild(kep)
+    }
+
+    while(box.length != 30){
+        var random2 = Math.floor(Math.random()*30+1);
+
+        var random1 = Math.floor(Math.random()*7+1);
+        var kep = document.createElement("img");
+
+        while(kepek2.includes(random1) == true){
+            random1 = Math.floor(Math.random()*7+1);
+        }
+        kep.src = "kartyak/t"+random1+".png";
+        kepek2.push(random1);
+        while(box.includes(random2) == true){
+            random2 = Math.floor(Math.random()*30+1);
+        }
+        var cella = document.getElementById(random2);
+        box.push(random2);
+
+        cella.appendChild(kep)
+    }
+
+    
     
 }
 

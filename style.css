@@ -6,33 +6,38 @@
 }
 #balpanel{
     width: 30%;
-    border: 1px solid black;
+    border: 1px solid lime;
     height: 40vw;
 }
 #kartyabox{
-    border: 1px solid orange;
+    border: 1px solid lime;
     height: 20vw;
 }
 #pontokbox{
-    border: 1px solid red;
+    border: 1px solid lime;
     height: 20vw;
 }
 #tabla{
-    width: 60%;
-    border: 1px solid rgb(240, 6, 181);
+    width: 50%;
+    border: 1px solid lime;
     display: flex;
     flex-direction: column;
 }
 #korokbox{
-    width: 10%;
-    border: 1px solid rgb(6, 228, 91);
+    width: 20%;
+    border: 1px solid lime;
 }
 .sordiv{
     display: flex;
     height: 8vw;
 }
 .oszlopdiv{
-    border: 1px solid black;
+    border: 1px solid lime;
     width: 16.6%;
     margin: 5px;
+}
+
+#tabla img{
+    width: 100%;
+    height: 100%;
 }
