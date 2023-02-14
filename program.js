@@ -70,11 +70,11 @@ function tablafeltoltes(){
     while(box.length != 30){
         var random2 = Math.floor(Math.random()*30+1);
 
-        var random1 = Math.floor(Math.random()*7+1);
+        var random1 = Math.floor(Math.random()*16+1);
         var kep = document.createElement("img");
 
         while(kepek2.includes(random1) == true){
-            random1 = Math.floor(Math.random()*7+1);
+            random1 = Math.floor(Math.random()*16+1);
         }
         kep.src = "kartyak/t"+random1+".png";
         kepek2.push(random1);
