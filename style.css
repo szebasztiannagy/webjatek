@@ -43,7 +43,6 @@
     height: 8vw;
 }
 .oszlopdiv{
-    border: 1px solid black;
     width: 16.6%;
     margin: 5px;
 }
@@ -51,6 +50,8 @@
 #tabla img{
     width: 100%;
     height: 100%;
+    background-color: black;
+    border-radius: 20px;
 }
 
 body{
